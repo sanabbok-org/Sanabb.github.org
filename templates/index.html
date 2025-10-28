@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>امیج بیک گراؤنڈ ریموور ٹول</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- ہیڈر -->
+        <header class="header">
+            <h1>🖼️ امیج بیک گراؤنڈ ریموور</h1>
+            <p>اپنی تصویر اپلوڈ کریں اور پلک جھپکتے میں بیک گراؤنڈ ہٹا لیں!</p>
+        </header>
+
+        <!-- اپلوڈ ایریا -->
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-content">
+                <div class="upload-icon">📁</div>
+                <h3>امیج اپلوڈ کریں</h3>
+                <p>یہاں کلک کریں یا امیج ڈریگ اینڈ ڈراپ کریں</p>
+                <span class="file-types">JPEG, PNG, JPG - زیادہ سے زیادہ 16MB</span>
+                <input type="file" id="fileInput" accept="image/*" hidden>
+                <button class="browse-btn" onclick="document.getElementById('fileInput').click()">
+                    فائل منتخب کریں
+                </button>
+            </div>
+        </div>
+
+        <!-- پیش نظارہ -->
+        <div class="preview-section" id="previewSection" style="display: none;">
+            <div class="preview-container">
+                <div class="preview-box">
+                    <h4>اصل امیج</h4>
+                    <img id="originalPreview" alt="اصل امیج">
+                </div>
+                <div class="preview-box">
+                    <h4>نتیجہ</h4>
+                    <div class="result-placeholder" id="resultPlaceholder">
+                        <p>پروسس ہو رہا ہے...</p>
+                    </div>
+                    <img id="resultPreview" alt="نتیجہ" style="display: none;">
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn process-btn" id="processBtn">
+                    🪄 بیک گراؤنڈ ہٹائیں
+                </button>
+                <button class="btn download-btn" id="downloadBtn" style="display: none;">
+                    📥 ڈاؤنلوڈ کریں
+                </button>
+                <button class="btn reset-btn" id="resetBtn">
+                    🔄 نیا امیج
+                </button>
+            </div>
+        </div>
+
+        <!-- لوڈنگ -->
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>آپ کی امیج پروسس ہو رہی ہے... براہ کرم انتظار کریں</p>
+        </div>
+
+        <!-- فیچرز -->
+        <div class="features">
+            <h2>💡 کیوں ہمارا ٹول استعمال کریں؟</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🚀 تیز</h3>
+                    <p>چند سیکنڈز میں بیک گراؤنڈ ریموول</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🆓 مفت</h3>
+                    <p>ہمیشہ کے لیے مفت استعمال</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔒 محفوظ</h3>
+                    <p>آپ کی امیجز محفوظ رہتی ہیں</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 دوستانہ</h3>
+                    <p>ہر ڈیوائس پر کام کرتا ہے</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- فوٹر -->
+    <footer class="footer">
+        <p>© 2024 امیج بیک گراؤنڈ ریموور ٹول | AI پاورڈ</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+          </html>
